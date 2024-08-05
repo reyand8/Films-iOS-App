@@ -1,3 +1,5 @@
+const { IMAGE_PATH_342 } = require('../../../config');
+
 class Credit {
     constructor(credit) {
         this.credit = credit;
@@ -7,7 +9,7 @@ class Credit {
         this.name = credit.name;
         this.originalName = credit.original_name;
         this.popularity = credit.popularity;
-        this.profilePath = credit.profile_path;
+        this.profilePath = `${IMAGE_PATH_342}${credit.profile_path}`;
         this.creditId = credit.credit_id;
     }
 }
