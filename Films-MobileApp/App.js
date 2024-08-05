@@ -1,20 +1,22 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
+import AppNavigation from "./navigation/AppNavigation";
+import {ApolloClient, ApolloProvider, from, HttpLink, InMemoryCache} from "@apollo/client";
+
+
 
 export default function App() {
+  const httpLink = new HttpLink({uri: 'http://localhost:4000/graphql'});
+
+  const client = new ApolloClient({
+    link: from([httpLink]),
+    cache: new InMemoryCache(),
+    connectToDevTools: true,
+  });
+
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+      <ApolloProvider client={client}>
+        <AppNavigation/>
+      </ApolloProvider>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
