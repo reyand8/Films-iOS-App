@@ -1,0 +1,66 @@
+type Query {
+    filmsByRating: Films
+    filmsByUpcoming: Films
+    filmsByTrending: Films
+    filmsSimilar(id: Int): Films
+    filmsById(ids: [Int]): [Film]
+    filmCredits(ids: [Int]): Credits
+    filmsBySearchQuery(search: FilmsSearchInput): Films
+}
+
+input FilmsSearchInput {
+    query: String,
+    page: Int,
+    language: String,
+}
+
+type Films {
+    page: Int!
+    totalResults: Int!
+    totalPages: Int!
+    results: [Film!]!
+}
+
+type Film {
+    id: ID!
+    title: String!
+    originalTitle: String
+    releaseDate(format: String): String!
+    posterPath: String
+    genres: [Genre]
+    adult: Boolean
+    overview: String
+    originalLanguage: String
+    backdropPath: String
+    popularity: Float
+    voteCount: Int
+    video: Boolean
+    runtime: Int
+    voteAverage: Float
+    production: [Production]
+}
+
+type Credits {
+    cast: [Credit!]!
+}
+
+type Credit {
+    id: ID!
+    gender: Int
+    adult: Boolean
+    name: String
+    originalName: String
+    popularity: Float
+    profilePath: String
+    creditId: String
+}
+
+type Genre {
+    id: Int!
+    name: String
+}
+
+type Production {
+    iso_3166_1: String
+    name: String
+}
