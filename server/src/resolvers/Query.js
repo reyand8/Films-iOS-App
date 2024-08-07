@@ -1,10 +1,7 @@
 const { getDetails, getTopRatedFilms,
-    getUpcomingFilms, getTrendingFilms, getCredits, getSimilar, getFilmsBySearchQuery
+    getUpcomingFilms, getTrendingFilms, getCredits, getSimilar, getFilmsBySearchQuery, getPersonDetails, getPersonFilms
 } = require('../modules/films');
 const {Film} = require("../modules/films/entities/Film");
-const {Credit} = require("../modules/films/entities/Credit");
-const {Credits} = require("../modules/films/entities/Credits");
-
 
 
 async function filmsByRating() {
@@ -37,6 +34,14 @@ async function filmsBySearchQuery(parent, args) {
     return await getFilmsBySearchQuery(args.search);
 }
 
+async function personDetails(parent, {id}) {
+    return await getPersonDetails(id);
+}
+
+async function personFilms(parent, {id}) {
+    return await getPersonFilms(id);
+}
+
 module.exports = {
     filmsByTrending,
     filmsByUpcoming,
@@ -45,5 +50,6 @@ module.exports = {
     filmCredits,
     filmsSimilar,
     filmsBySearchQuery,
-
+    personDetails,
+    personFilms,
 }
