@@ -6,12 +6,15 @@ type Query {
     filmsById(ids: [Int]): [Film]
     filmCredits(ids: [Int]): Credits
     filmsBySearchQuery(search: FilmsSearchInput): Films
+    personDetails(id: Int): Person
+    personFilms(id: Int): PersonFilms
 }
 
 input FilmsSearchInput {
-    query: String,
-    page: Int,
-    language: String,
+    query: String!
+    include_adult: Boolean!
+    language: String
+    page: Int!
 }
 
 type Films {
@@ -53,6 +56,37 @@ type Credit {
     popularity: Float
     profilePath: String
     creditId: String
+}
+
+type Person {
+    id: ID!
+    adult: Boolean
+    birthday: String
+    deathday: String
+    biography: String
+    name: String
+    popularity: Float
+    profilePath: String
+    placeOfBirth: String
+    imdbId: String
+}
+
+type PersonFilms{
+    cast: [PersonFilmCredits!]!
+}
+
+type PersonFilmCredits {
+    id: ID!
+    adult: Boolean
+    backdropPath: String
+    deathday: String
+    originalLanguage: String
+    originalTitle: String
+    overview: String
+    popularity: Float
+    posterPath: String
+    releaseDate: String
+    title: String
 }
 
 type Genre {
