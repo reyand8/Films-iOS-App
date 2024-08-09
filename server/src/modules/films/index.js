@@ -3,6 +3,9 @@ const axios = require('axios');
 const { Films } = require('./entities/Films');
 const { API_KEY, API_BASE_URL } = require('../../config');
 const {Credits} = require("./entities/Credits");
+const {Person} = require("./entities/Person");
+const {PersonFilms} = require("./entities/PersonFilms");
+
 
 
 const getTopRatedFilms = async () => {
@@ -49,6 +52,16 @@ const getFilmsBySearchQuery = async (search) => {
     return new Films(result.data);
 }
 
+const getPersonDetails = async (id) => {
+    const result = await axios.get(`${API_BASE_URL}person/${id}?api_key=${API_KEY}`);
+    return new Person(result.data);
+}
+
+const getPersonFilms = async (id) => {
+    const result = await axios.get(`${API_BASE_URL}person/${id}/movie_credits?api_key=${API_KEY}`);
+    return new PersonFilms(result.data);
+}
+
 module.exports = {
     getTopRatedFilms,
     getUpcomingFilms,
@@ -57,4 +70,6 @@ module.exports = {
     getCredits,
     getSimilar,
     getFilmsBySearchQuery,
+    getPersonDetails,
+    getPersonFilms
 }
