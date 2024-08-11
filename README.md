@@ -91,27 +91,27 @@ ____
 
 ### Home screen
 
-<img src="readmeScr/Home_screen.png" alt="Home screen" width="408" height="782" />
+<img src="readmeScr/Home_screen.png" alt="Home screen" width="368" height="752" />
 
 ____
 ____
 
 ### Single film
 
-<img src="readmeScr/Single_Film.png" alt="Single Film" width="408" height="782"" />
+<img src="readmeScr/Single_Film.png" alt="Single Film" width="368" height="752" />
 
 ____
 ____
 
 ### Search films
 
-<img src="readmeScr/Search_Film.png" alt="Search Film" width="408" height="782" />
-<img src="readmeScr/Search_Film2.png" alt="Search Film 2" width="408" height="782" />
+<img src="readmeScr/Search_Film.png" alt="Search Film" width="368" height="752" />
+<img src="readmeScr/Search_Film2.png" alt="Search Film 2" width="368" height="752" />
 
 ____
 ____
 
 ### Single Person
 
-<img src="readmeScr/Single_Person.png" alt="Single Person" width="408" height="782" />
-<img src="readmeScr/Single_Person2.png" alt="Single Person 2" width="408" height="782" />
+<img src="readmeScr/Single_Person.png" alt="Single Person" width="368" height="752" />
+<img src="readmeScr/Single_Person2.png" alt="Single Person 2" width="368" height="752" />
