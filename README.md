@@ -89,29 +89,29 @@ ____
 
 ## Examples
 
-
 ### Home screen
 
-![Home screen.png](readmeScr/Home_screen.png)
+<img src="readmeScr/Home_screen.png" alt="Home screen" width="408" height="782" />
 
 ____
 ____
 
 ### Single film
 
-![Single_Film.png](readmeScr/Single_Film.png)
+<img src="readmeScr/Single_Film.png" alt="Single Film" width="408" height="782"" />
 
 ____
 ____
 
 ### Search films
 
-![Search_Film.png](readmeScr/Search_Film.png)
-![Search_Film2.png](readmeScr/Search_Film2.png)
+<img src="readmeScr/Search_Film.png" alt="Search Film" width="408" height="782" />
+<img src="readmeScr/Search_Film2.png" alt="Search Film 2" width="408" height="782" />
+
 ____
 ____
 
 ### Single Person
 
-![Single_Person.png](readmeScr/Single_Person.png)
-![Single_Person2.png](readmeScr/Single_Person2.png)
+<img src="readmeScr/Single_Person.png" alt="Single Person" width="408" height="782" />
+<img src="readmeScr/Single_Person2.png" alt="Single Person 2" width="408" height="782" />
