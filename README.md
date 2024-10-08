@@ -10,7 +10,6 @@
     3. [Search films](#Search-films)
     4. [Single Person](#Single-Person)
 
-
 ____
 
 ## 📜 Main Information
